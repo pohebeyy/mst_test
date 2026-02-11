@@ -12,22 +12,22 @@ Flutter-приложение с онбордингом, paywall и главны�
 
 ## Структура
 
-lib/
-├── main.dart
-├── app.dart
-├── data/
-│ └── subscription_repository.dart
-├── logic/
-│ ├── subscription_cubit.dart
-│ └── subscription_state.dart
-└── presentation/
-├── screens/
-│ ├── onboarding_screen.dart
-│ ├── paywall_screen.dart
-│ └── main_screen.dart
-└── widgets/
-├── primary_button.dart
-└── subscription_option_card.dart
+    lib/
+    ├── main.dart
+    ├── app.dart
+    ├── data/
+    │   └── subscription_repository.dart
+    ├── logic/
+    │   ├── subscription_cubit.dart
+    │   └── subscription_state.dart
+    └── presentation/
+        ├── screens/
+        │   ├── onboarding_screen.dart
+        │   ├── paywall_screen.dart
+        │   └── main_screen.dart
+        └── widgets/
+            ├── primary_button.dart
+            └── subscription_option_card.dart
 
 
 ## Установка
