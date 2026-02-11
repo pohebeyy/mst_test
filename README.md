@@ -1,16 +1,58 @@
-# testmst
+# Test Subscription App
 
-A new Flutter project.
+Flutter-приложение с онбордингом, paywall и главным экраном. Демонстрирует работу с подписками и локальным хранением состояния.
 
-## Getting Started
+## Архитектура
 
-This project is a starting point for a Flutter application.
+Приложение следует чистой архитектуре с разделением на три слоя:
 
-A few resources to get you started if this is your first Flutter project:
+- **Data Layer** — `SubscriptionRepository` работает с `SharedPreferences`
+- **Logic Layer** — `SubscriptionCubit` (BLoC) управляет бизнес-логикой
+- **Presentation Layer** — экраны и переиспользуемые виджеты
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Структура
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+lib/
+├── main.dart
+├── app.dart
+├── data/
+│ └── subscription_repository.dart
+├── logic/
+│ ├── subscription_cubit.dart
+│ └── subscription_state.dart
+└── presentation/
+├── screens/
+│ ├── onboarding_screen.dart
+│ ├── paywall_screen.dart
+│ └── main_screen.dart
+└── widgets/
+├── primary_button.dart
+└── subscription_option_card.dart
+
+
+## Установка
+
+```bash
+flutter pub get
+flutter run
+Зависимости
+text
+dependencies:
+  flutter_bloc: ^8.1.3
+  shared_preferences: ^2.2.0
+Возможные улучшения
+Интеграция реального биллинга (in_app_purchase, RevenueCat)
+
+Unit и Widget тесты (покрытие >80%)
+
+Dependency Injection (GetIt)
+
+Firebase Analytics и Crashlytics
+
+Локализация (l10n)
+
+Lottie анимации на онбординге
+
+Темная тема
+
+Адаптивная вёрстка для планшетов
