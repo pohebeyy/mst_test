@@ -40,7 +40,9 @@ text
 dependencies:
   flutter_bloc: ^8.1.3
   shared_preferences: ^2.2.0
-Возможные улучшения
+```
+
+##Возможные улучшения
 Интеграция реального биллинга (in_app_purchase, RevenueCat)
 
 Unit и Widget тесты (покрытие >80%)
